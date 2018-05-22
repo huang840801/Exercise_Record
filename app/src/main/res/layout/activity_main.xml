@@ -7,41 +7,25 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/tv_username"
+        android:id="@+id/tv_Day1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="25dp"
-        android:text="username"
+        android:text="Day1"
+        android:textSize="50dp"
         />
-
-    <TextView
-        android:id="@+id/tv_password"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/tv_username"
-        android:layout_marginTop="25dp"
-        android:text="password"
-        />
-
-   <EditText
-       android:id="@+id/et_username"
-       android:layout_toRightOf="@+id/tv_username"
-       android:layout_width="match_parent"
-       android:layout_height="wrap_content" />
 
     <EditText
-        android:id="@+id/et_password"
-        android:layout_below="@+id/et_username"
-        android:layout_toRightOf="@+id/tv_password"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
-
-
+       android:id="@+id/et_username"
+       android:layout_toRightOf="@+id/tv_Day1"
+        android:layout_alignBottom="@+id/tv_Day1"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content" />
 
 
     <Button
         android:id="@+id/btn_save"
-        android:layout_below="@+id/tv_password"
+        android:layout_below="@+id/tv_Day1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="60dp"
@@ -50,14 +34,14 @@
         />
 
     <Button
-        android:id="@+id/btn_load"
+        android:id="@+id/btn_apply"
         android:layout_toRightOf="@+id/btn_save"
         android:layout_marginLeft="80dp"
-        android:layout_below="@+id/tv_password"
+        android:layout_below="@+id/tv_Day1"
         android:layout_marginTop="30dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="load"
+        android:text="完成!"
         />
     <TextView
         android:id="@+id/tv_show"
@@ -68,4 +52,19 @@
         android:layout_below="@+id/btn_save"
         android:text="789"
         android:textSize="50dp"/>
+
+    <TextView
+        android:id="@+id/tv_spinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/select_sport"
+        android:layout_below="@+id/tv_show" />
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_spinner"
+        android:layout_marginTop="30dp"
+        />
 </RelativeLayout>
