@@ -1,16 +1,15 @@
 package com.huang.hello.exercise_record;
 
 import android.content.SharedPreferences;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.os.CountDownTimer;
+
 
 public class Page2Activity extends AppCompatActivity {
     private EditText usernameinput;
@@ -18,33 +17,32 @@ public class Page2Activity extends AppCompatActivity {
     private Button btn_save;
     private Button btn_apply;
 
+    private TextView tv_time;
+    private Button btn_starttime;
+    private CountDownTimer countdowntimer;
+    private long timeleftinmilliseconds=600000;
+    private boolean timerrunning;
+
+
     public static final String SHARED_PREFS="sharedPrefs";
     public static final String TEXT="text";
 
     private String text;
 
-    Spinner spinner;
-    ArrayAdapter<CharSequence> adapter;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_page2);
 
-        spinner=findViewById(R.id.spinner);
-        adapter=ArrayAdapter.createFromResource(this,R.array.Sports_name,android.R.layout.simple_spinner_item);
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spinner.setAdapter(adapter);
-        spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+        tv_time=findViewById(R.id.tv_time);
+        btn_starttime=findViewById(R.id.btn_starttime);
+
+        btn_starttime.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-
-                Toast.makeText(getBaseContext(),parent.getItemAtPosition(position)+"已選擇",Toast.LENGTH_LONG).show();
-            }
-
-            @Override
-            public void onNothingSelected(AdapterView<?> parent) {
-
+            public void onClick(View v) {
+                startstop();
             }
         });
 
@@ -90,4 +88,47 @@ public class Page2Activity extends AppCompatActivity {
     public void updateViews(){
         textViewShow.setText(text);
     }
+    public void startstop(){
+        if (timerrunning) {
+            stopTimer();
+        }
+        else{
+            startTimer();
+        }
+    }
+    public void startTimer(){
+
+        countdowntimer=new CountDownTimer(timeleftinmilliseconds,1000) {
+            @Override
+            public void onTick(long l) {
+                timeleftinmilliseconds=l;
+                updateTimer();
+            }
+
+            @Override
+            public void onFinish() {
+
+            }
+        }.start();
+        btn_starttime.setText("Pause");
+        timerrunning=true;
+    }
+    public void stopTimer(){
+        countdowntimer.cancel();
+        btn_starttime.setText("Start");
+
+        timerrunning=false;
+    }
+public void updateTimer(){
+    int minutes=(int)timeleftinmilliseconds/60000;
+    int seconds=(int)timeleftinmilliseconds%60000/1000;
+
+    String timeleftText;
+    timeleftText= "" +minutes;
+    timeleftText+=":";
+    if(seconds<10) timeleftText+="0";
+    timeleftText+=seconds;
+
+    tv_time.setText(timeleftText);
+}
 }

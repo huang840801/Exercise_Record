@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#4dbcef"
     tools:context=".Page2Activity">
 
     <TextView
@@ -54,17 +55,26 @@
         android:textSize="50dp"/>
 
     <TextView
-        android:id="@+id/tv_spinner"
-        android:layout_width="wrap_content"
+        android:id="@+id/tv_time"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/select_sport"
-        android:layout_below="@+id/tv_show" />
-
-    <Spinner
-        android:id="@+id/spinner"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/tv_spinner"
-        android:layout_marginTop="30dp"
+        android:layout_below="@+id/tv_show"
+        android:text="10:00"
+        android:gravity="center"
+        android:layout_marginTop="50dp"
+        android:textSize="50dp"
         />
+
+    <Button
+        android:id="@+id/btn_starttime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_below="@+id/tv_time"
+        android:text="Start"
+        android:layout_centerHorizontal="true"
+        />
+
+
+
 </RelativeLayout>

@@ -29,14 +29,15 @@
             android:layout_height="100dp"
             android:layout_below="@+id/button_Day1"
             android:layout_marginTop="10dp"
+            android:background="@mipmap/run2"
             android:text="Day2" />
 
-        <Button
-            android:id="@+id/button_Day3"
+        <Button           android:id="@+id/button_Day3"
             android:layout_width="match_parent"
             android:layout_height="100dp"
             android:layout_below="@+id/button_Day2"
             android:layout_marginTop="10dp"
+            android:background="@mipmap/run3"
             android:text="Day3" />
 
         <Button
@@ -45,6 +46,7 @@
             android:layout_height="100dp"
             android:layout_below="@+id/button_Day3"
             android:layout_marginTop="10dp"
+            android:background="@mipmap/run4"
             android:text="Day4" />
     <Button
         android:id="@+id/button_Day5"
@@ -52,6 +54,7 @@
         android:layout_height="100dp"
         android:text="Day5"
         android:layout_below="@+id/button_Day4"
+        android:background="@mipmap/run5"
         android:layout_marginTop="10dp"
         />
 
@@ -60,6 +63,7 @@
             android:layout_width="match_parent"
             android:layout_height="100dp"
             android:layout_below="@+id/button_Day5"
+            android:background="@mipmap/run6"
             android:layout_marginTop="10dp"
             android:text="Day6" />
     <Button
@@ -68,6 +72,7 @@
         android:layout_height="100dp"
         android:text="Day7"
         android:layout_below="@+id/button_Day6"
+        android:background="@mipmap/run7"
         android:layout_marginTop="10dp"
         />
     <Button
@@ -76,7 +81,8 @@
         android:layout_height="100dp"
         android:text="Day8"
         android:layout_below="@+id/button_Day7"
-        android:layout_marginTop="0dp"
+        android:background="@mipmap/run8"
+        android:layout_marginTop="10dp"
         />
     <Button
         android:id="@+id/button_Day9"
@@ -84,6 +90,8 @@
         android:layout_height="100dp"
         android:text="Day9"
         android:layout_below="@+id/button_Day8"
+        android:background="@mipmap/run9"
+        android:layout_marginTop="10dp"
 
         />
     <Button
@@ -92,6 +100,8 @@
         android:layout_height="100dp"
         android:text="Day10"
         android:layout_below="@+id/button_Day9"
+        android:background="@mipmap/run10"
+        android:layout_marginTop="10dp"
 
         />
 </LinearLayout>
