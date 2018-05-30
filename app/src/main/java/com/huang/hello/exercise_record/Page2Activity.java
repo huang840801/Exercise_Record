@@ -1,6 +1,7 @@
 package com.huang.hello.exercise_record;
 
 import android.content.SharedPreferences;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -107,6 +108,8 @@ public class Page2Activity extends AppCompatActivity {
 
             @Override
             public void onFinish() {
+                MediaPlayer mediaPlayer = MediaPlayer.create(getApplicationContext(),R.raw.ling);
+                mediaPlayer.start();
 
             }
         }.start();
