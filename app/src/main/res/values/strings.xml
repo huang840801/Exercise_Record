@@ -8,4 +8,5 @@
         <item>打網球</item>
 
     </string-array>
+    <string name="title_activity_page2__crunches">Page2_CrunchesActivity</string>
 </resources>

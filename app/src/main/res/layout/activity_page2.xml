@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#4dbcef"
+    android:background="#f2f4f5"
     tools:context=".Page2Activity">
 
     <TextView
@@ -13,6 +13,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="25dp"
         android:text="Day1"
+        android:textColor="#000000"
         android:textSize="50dp" />
 
     <EditText
@@ -30,6 +31,8 @@
         android:layout_below="@+id/tv_Day1"
         android:layout_marginLeft="60dp"
         android:layout_marginTop="30dp"
+        android:background="@drawable/buttonshape"
+        android:textColor="#000000"
         android:text="save" />
 
     <Button
@@ -40,7 +43,8 @@
         android:layout_marginLeft="80dp"
         android:layout_marginTop="30dp"
         android:layout_toRightOf="@+id/btn_save"
-        android:text="完成!" />
+        android:text="完成!"
+        />
 
     <TextView
         android:id="@+id/tv_show"
@@ -52,43 +56,32 @@
         android:text=""
         android:textSize="50dp" />
 
-    <ImageView
-        android:id="@+id/img_crunches"
-        android:layout_width="200dp"
-        android:layout_height="100dp"
-        android:layout_below="@+id/tv_show"
-        android:src="@drawable/Crunches" />
 
-    <TextView
-        android:id="@+id/tv_time"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/btn_apply"
-        android:layout_toRightOf="@+id/img_crunches"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="90dp"
-        android:gravity="center"
-        android:text="1:00"
-        android:textSize="50dp" />
+
 
     <Button
-        android:id="@+id/btn_starttime"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_below="@+id/btn_apply"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="30dp"
-        android:layout_centerHorizontal="true"
+        android:id="@+id/btn_Crunches"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btn_save"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
         android:background="@drawable/buttonshape"
-        android:shadowColor="#A8A8A8"
-        android:shadowDx="0"
+        android:textColor="#000000"
+        android:text="仰臥起坐"
 
+        android:textSize="50sp" />
 
-        android:shadowDy="0"
-        android:shadowRadius="5"
-        android:text="Start"
-        android:textColor="#40FFF2"
-        android:textSize="10sp" />
-
+    <Button
+        android:id="@+id/btn_Legup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btn_Crunches"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:background="@drawable/buttonshape"
+        android:textColor="#000000"
+        android:text="抬腿"
+        android:textSize="50sp" />
 
 </RelativeLayout>
