@@ -1,15 +1,14 @@
 package com.huang.hello.exercise_record;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.os.CountDownTimer;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
-import android.content.Intent;
 
 
 public class Page2Activity extends AppCompatActivity {
@@ -19,10 +18,7 @@ public class Page2Activity extends AppCompatActivity {
     private Button btn_apply;
 
     private TextView tv_time;
-    private Button btn_Crunches;
-    private CountDownTimer countdowntimer;
-    private long timeleftinmilliseconds=600000;
-    private boolean timerrunning;
+    private Button btn_crunches;
 
 
     public static final String SHARED_PREFS="sharedPrefs";
@@ -37,10 +33,8 @@ public class Page2Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_page2);
 
-        tv_time=findViewById(R.id.tv_time);
-        btn_Crunches=findViewById(R.id.btn_starttime);
-
-        btn_Crunches.setOnClickListener(new View.OnClickListener() {
+        btn_crunches=findViewById(R.id.btn_crunches);
+        btn_crunches.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent=new Intent(Page2Activity.this,Page2_CrunchesActivity.class);

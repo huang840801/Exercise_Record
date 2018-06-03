@@ -20,8 +20,8 @@
             android:layout_width="match_parent"
             android:layout_height="100dp"
             android:background="@mipmap/run1"
-
             android:text="Day1" />
+
 
         <Button
             android:id="@+id/button_Day2"

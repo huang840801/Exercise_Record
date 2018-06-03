@@ -13,14 +13,14 @@ public class Page2_CrunchesActivity extends AppCompatActivity {
     private TextView tv_time;
     private Button btn_starttime;
     private CountDownTimer countdowntimer;
-    private long timeleftinmilliseconds=600000;
+    private long timeleftinmilliseconds=60000;
     private boolean timerrunning;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_page2__crunches);
-        tv_time=findViewById(R.id.tv_time);
-        btn_starttime=findViewById(R.id.btn_starttime);
+        tv_time=findViewById(R.id.tv_time_1);
+        btn_starttime=findViewById(R.id.btn_starttime_1);
 
         btn_starttime.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -63,8 +63,8 @@ public class Page2_CrunchesActivity extends AppCompatActivity {
         timerrunning=false;
     }
     public void updateTimer(){
-        int minutes=(int)timeleftinmilliseconds/60000;
-        int seconds=(int)timeleftinmilliseconds%60000/1000;
+        int minutes=(int)timeleftinmilliseconds/6000;
+        int seconds=(int)timeleftinmilliseconds%6000/1000;
 
         String timeleftText;
         timeleftText= "" +minutes;

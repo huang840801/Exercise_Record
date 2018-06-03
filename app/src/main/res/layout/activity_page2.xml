@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#f2f4f5"
+    android:background="#caf5d9"
     tools:context=".Page2Activity">
 
     <TextView
@@ -40,7 +40,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/tv_Day1"
-        android:layout_marginLeft="80dp"
+
+        android:layout_marginLeft="0dp"
         android:layout_marginTop="30dp"
         android:layout_toRightOf="@+id/btn_save"
         android:text="完成!"
@@ -60,7 +61,7 @@
 
 
     <Button
-        android:id="@+id/btn_Crunches"
+        android:id="@+id/btn_crunches"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/btn_save"
@@ -76,7 +77,7 @@
         android:id="@+id/btn_Legup"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/btn_Crunches"
+        android:layout_below="@+id/btn_crunches"
         android:layout_marginTop="20dp"
         android:gravity="center"
         android:background="@drawable/buttonshape"
