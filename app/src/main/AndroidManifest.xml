@@ -17,7 +17,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".Page2Activity" />
-        <activity android:name=".Page2_CrunchesActivity"></activity>
+        <activity android:name=".Main2Activity" />
+        <activity android:name=".Page2CrunchesActivity"></activity>
     </application>
 
 </manifest>

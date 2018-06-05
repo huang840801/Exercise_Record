@@ -5,13 +5,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#ffffff"
-    tools:context=".Page2_CrunchesActivity">
+    tools:context=".Page2CrunchesActivity">
 
     <ImageView
         android:id="@+id/image_crunches"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:src="@drawable/crunches" />
+        android:layout_height="200dp"/>
 
     <Button
         android:id="@+id/btn_starttime_1"
@@ -33,7 +32,7 @@
         android:layout_marginLeft="44dp"
         android:gravity="center"
         android:layout_toRightOf="@+id/btn_starttime_1"
-        android:text="1:00"
+        android:text="10:00"
         android:textColor="#000000"
         android:textSize="45dp" />
 

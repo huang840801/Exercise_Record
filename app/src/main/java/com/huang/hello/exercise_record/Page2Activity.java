@@ -37,7 +37,7 @@ public class Page2Activity extends AppCompatActivity {
         btn_crunches.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(Page2Activity.this,Page2_CrunchesActivity.class);
+                Intent intent=new Intent(Page2Activity.this,Main2Activity.class);
                 startActivity(intent);
             }
         });

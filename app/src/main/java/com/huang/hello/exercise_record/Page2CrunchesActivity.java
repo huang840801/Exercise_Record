@@ -8,21 +8,21 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-public class Page2_CrunchesActivity extends AppCompatActivity {
+public class Page2CrunchesActivity extends AppCompatActivity {
 
-    private TextView tv_time;
-    private Button btn_starttime;
+    private TextView tv_time_1;
+    private Button btn_starttime_1;
     private CountDownTimer countdowntimer;
-    private long timeleftinmilliseconds=60000;
+    private long timeleftinmilliseconds=600000;
     private boolean timerrunning;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_page2__crunches);
-        tv_time=findViewById(R.id.tv_time_1);
-        btn_starttime=findViewById(R.id.btn_starttime_1);
+        setContentView(R.layout.activity_main2);
+        tv_time_1=findViewById(R.id.tv_time_1);
+        btn_starttime_1=findViewById(R.id.btn_starttime_1);
 
-        btn_starttime.setOnClickListener(new View.OnClickListener() {
+        btn_starttime_1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startstop();
@@ -53,18 +53,18 @@ public class Page2_CrunchesActivity extends AppCompatActivity {
 
             }
         }.start();
-        btn_starttime.setText("Pause");
+        btn_starttime_1.setText("Pause");
         timerrunning=true;
     }
     public void stopTimer(){
         countdowntimer.cancel();
-        btn_starttime.setText("Start");
+        btn_starttime_1.setText("Start");
 
         timerrunning=false;
     }
     public void updateTimer(){
-        int minutes=(int)timeleftinmilliseconds/6000;
-        int seconds=(int)timeleftinmilliseconds%6000/1000;
+        int minutes=(int)timeleftinmilliseconds/60000;
+        int seconds=(int)timeleftinmilliseconds%60000/1000;
 
         String timeleftText;
         timeleftText= "" +minutes;
@@ -72,6 +72,6 @@ public class Page2_CrunchesActivity extends AppCompatActivity {
         if(seconds<10) timeleftText+="0";
         timeleftText+=seconds;
 
-        tv_time.setText(timeleftText);
+        tv_time_1.setText(timeleftText);
     }
 }
