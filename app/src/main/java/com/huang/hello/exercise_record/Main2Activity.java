@@ -13,7 +13,7 @@ public class Main2Activity extends AppCompatActivity {
     private TextView tv_time_1;
     private Button btn_starttime_1;
     private CountDownTimer countdowntimer;
-    private long timeleftinmilliseconds=10000;
+    private long timeleftinmilliseconds=60000;
     private boolean timerrunning;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -63,8 +63,8 @@ public class Main2Activity extends AppCompatActivity {
         timerrunning=false;
     }
     public void updateTimer(){
-        int minutes=(int)timeleftinmilliseconds/6000;
-        int seconds=(int)timeleftinmilliseconds%6000/1000;
+        int minutes=(int)timeleftinmilliseconds/60000;
+        int seconds=(int)timeleftinmilliseconds%60000/1000;
 
         String timeleftText;
         timeleftText= "" +minutes;
