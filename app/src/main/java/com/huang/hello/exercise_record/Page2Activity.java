@@ -19,7 +19,7 @@ public class Page2Activity extends AppCompatActivity {
 
     private TextView tv_time;
     private Button btn_crunches;
-
+    private Button btn_raiselegs;
 
     public static final String SHARED_PREFS="sharedPrefs";
     public static final String TEXT="text";
@@ -42,7 +42,14 @@ public class Page2Activity extends AppCompatActivity {
             }
         });
 
-
+        btn_raiselegs=findViewById(R.id.btn_raiselegs);
+        btn_raiselegs.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(Page2Activity.this,RaiselegActivity.class);
+                startActivity(intent);
+            }
+        });
 
         usernameinput=findViewById(R.id.et_username);
         textViewShow=(TextView)findViewById(R.id.tv_show);

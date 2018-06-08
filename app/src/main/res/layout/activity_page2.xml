@@ -18,18 +18,20 @@
 
     <EditText
         android:id="@+id/et_username"
-        android:layout_width="match_parent"
+        android:layout_width="297dp"
         android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/tv_Day1"
-        android:layout_toRightOf="@+id/tv_Day1" />
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="123dp"
+        android:textColor="#000000"
+        android:text=" 輸入你今天完成了哪些項目吧!"/>
 
 
     <Button
         android:id="@+id/btn_save"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/tv_Day1"
-        android:layout_marginLeft="60dp"
+        android:layout_below="@+id/tv_show"
+        android:layout_marginLeft="0dp"
         android:layout_marginTop="30dp"
         android:background="@drawable/buttonshape"
         android:textColor="#000000"
@@ -39,19 +41,16 @@
         android:id="@+id/btn_apply"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/tv_Day1"
-
-        android:layout_marginLeft="0dp"
-        android:layout_marginTop="30dp"
-        android:layout_toRightOf="@+id/btn_save"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/et_username"
         android:text="完成!"
-        />
+        android:layout_alignParentRight="true" />
 
     <TextView
         android:id="@+id/tv_show"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/btn_save"
+        android:layout_below="@+id/et_username"
         android:layout_marginTop="20dp"
         android:gravity="center"
         android:text=""
@@ -74,7 +73,7 @@
         android:textSize="50sp" />
 
     <Button
-        android:id="@+id/btn_Legup"
+        android:id="@+id/btn_raiselegs"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/btn_crunches"
