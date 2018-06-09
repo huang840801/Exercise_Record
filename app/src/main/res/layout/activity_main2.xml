@@ -1,79 +1,183 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="#ffffff"
-    tools:context=".Main2Activity">
+    android:layout_height="match_parent">
 
-    <ImageView
-        android:id="@+id/image_crunches"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:src="@mipmap/crunches" />
+        android:layout_height="match_parent"
+        android:background="#ffffff"
+        tools:context=".Main2Activity">
 
-    <Button
-        android:id="@+id/btn_starttime_1"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
-        android:layout_below="@+id/image_crunches"
-        android:layout_marginTop="0dp"
-        android:background="@drawable/buttonshape"
-        android:gravity="center"
-        android:text="開始"
-        android:textSize="50sp" />
+        <ImageView
+            android:id="@+id/image_crunches"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:src="@mipmap/crunches" />
 
-    <TextView
-        android:id="@+id/tv_time_1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/image_crunches"
-        android:layout_marginTop="120dp"
-        android:layout_marginLeft="40dp"
-        android:gravity="center"
-        android:layout_toRightOf="@+id/btn_starttime_1"
-        android:text="1:00"
-        android:textColor="#000000"
-        android:textSize="45dp" />
+        <Button
+            android:id="@+id/btn_starttime_1"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_below="@+id/image_crunches"
+            android:layout_marginTop="0dp"
+            android:background="@drawable/buttonshape"
+            android:gravity="center"
+            android:text="開始"
+            android:textSize="50sp" />
 
-    <ImageView
-        android:id="@+id/image_clock_1"
-        android:layout_width="220dp"
-        android:layout_height="200dp"
-        android:layout_below="@+id/image_crunches"
-        android:layout_toRightOf="@+id/btn_starttime_1"
-        android:src="@drawable/clock" />
-    <Button
-        android:id="@+id/btn_starttime_2"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
-        android:layout_below="@+id/btn_starttime_1"
-        android:layout_marginTop="0dp"
-        android:background="@drawable/buttonshape"
-        android:gravity="center"
-        android:text="休息一下"
-        android:textSize="50sp" />
+        <TextView
+            android:id="@+id/tv_starttime_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/image_crunches"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="120dp"
+            android:layout_toRightOf="@+id/btn_starttime_1"
+            android:gravity="center"
+            android:text="1:00"
+            android:textColor="#000000"
+            android:textSize="45dp" />
 
-    <TextView
-        android:id="@+id/tv_time_2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/image_clock_1"
-        android:layout_marginTop="100dp"
-        android:layout_marginLeft="48dp"
-        android:gravity="center"
-        android:text="2:00"
-        android:layout_toRightOf="@+id/btn_starttime_2"
-        android:textColor="#000000"
-        android:textSize="40dp" />
+        <ImageView
+            android:id="@+id/image_clock_1"
+            android:layout_width="220dp"
+            android:layout_height="200dp"
+            android:layout_below="@+id/image_crunches"
+            android:layout_toRightOf="@+id/btn_starttime_1"
+            android:src="@drawable/clock" />
 
-    <ImageView
-        android:id="@+id/image_clock_2"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
-        android:layout_below="@+id/image_clock_1"
-        android:layout_toRightOf="@+id/btn_starttime_2"
-        android:src="@drawable/clock" />
+        <Button
+            android:id="@+id/btn_resttime_1"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_below="@+id/btn_starttime_1"
+            android:layout_marginTop="0dp"
+            android:background="@drawable/buttonshape"
+            android:gravity="center"
+            android:text="休息一下"
+            android:textSize="50sp" />
 
-</RelativeLayout>
+        <TextView
+            android:id="@+id/tv_resttime_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/image_clock_1"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="120dp"
+            android:layout_toRightOf="@+id/btn_starttime_2"
+            android:text="0:30"
+            android:textColor="#000000"
+            android:textSize="40dp" />
+
+        <ImageView
+            android:id="@+id/image_clock_2"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_below="@+id/image_clock_1"
+            android:layout_toRightOf="@+id/btn_starttime_2"
+            android:src="@drawable/clock" />
+
+        <Button
+            android:id="@+id/btn_starttime_2"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_below="@+id/btn_resttime_1"
+            android:layout_marginTop="0dp"
+            android:background="@drawable/buttonshape"
+            android:gravity="center"
+            android:text="再來一次"
+            android:textSize="50sp" />
+
+        <TextView
+            android:id="@+id/tv_starttime_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/image_clock_2"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="120dp"
+            android:layout_toRightOf="@+id/btn_starttime_1"
+            android:gravity="center"
+            android:text="1:00"
+            android:textColor="#000000"
+            android:textSize="45dp" />
+
+        <ImageView
+            android:id="@+id/image_clock_3"
+            android:layout_width="220dp"
+            android:layout_height="200dp"
+            android:layout_below="@+id/image_clock_2"
+            android:layout_toRightOf="@+id/btn_starttime_1"
+            android:src="@drawable/clock" />
+
+        <Button
+            android:id="@+id/btn_resttime_2"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_below="@+id/btn_starttime_2"
+            android:layout_marginTop="0dp"
+            android:background="@drawable/buttonshape"
+            android:gravity="center"
+            android:text="休息一下"
+            android:textSize="50sp" />
+
+        <TextView
+            android:id="@+id/tv_resttime_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/image_clock_3"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="120dp"
+            android:layout_toRightOf="@+id/btn_starttime_2"
+            android:text="0:30"
+            android:textColor="#000000"
+            android:textSize="40dp" />
+
+        <ImageView
+            android:id="@+id/image_clock_4"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_below="@+id/image_clock_3"
+            android:layout_toRightOf="@+id/btn_starttime_2"
+            android:src="@drawable/clock" />
+
+        <Button
+            android:id="@+id/btn_starttime_3"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_below="@+id/btn_resttime_2"
+            android:layout_marginTop="0dp"
+            android:background="@drawable/buttonshape"
+            android:gravity="center"
+            android:text="再來一次"
+            android:textSize="50sp" />
+
+        <TextView
+            android:id="@+id/tv_starttime_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/image_clock_4"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="120dp"
+            android:layout_toRightOf="@+id/btn_starttime_1"
+            android:gravity="center"
+            android:text="1:00"
+            android:textColor="#000000"
+            android:textSize="45dp" />
+
+        <ImageView
+            android:id="@+id/image_clock_5"
+            android:layout_width="220dp"
+            android:layout_height="200dp"
+            android:layout_below="@+id/image_clock_4"
+            android:layout_toRightOf="@+id/btn_starttime_1"
+            android:src="@drawable/clock" />
+
+    </RelativeLayout>
+
+</ScrollView>
+
+

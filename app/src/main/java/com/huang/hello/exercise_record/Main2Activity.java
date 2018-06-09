@@ -10,8 +10,19 @@ import android.widget.TextView;
 
 public class Main2Activity extends AppCompatActivity {
 
-    private TextView tv_time_1;
+    private TextView tv_starttime_1;
+    private TextView tv_starttime_2;
+    private TextView tv_starttime_3;
+    private TextView tv_resttime_1;
+    private TextView tv_resttime_2;
+
+
     private Button btn_starttime_1;
+    private Button btn_starttime_2;
+    private Button btn_starttime3;
+    private Button btn_resttime1;
+    private Button btn_resttime_2;
+
     private CountDownTimer countdowntimer;
     private long timeleftinmilliseconds=60000;
     private boolean timerrunning;
@@ -19,7 +30,7 @@ public class Main2Activity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
-        tv_time_1=findViewById(R.id.tv_time_1);
+        tv_starttime_1=findViewById(R.id.tv_starttime_1);
         btn_starttime_1=findViewById(R.id.btn_starttime_1);
 
         btn_starttime_1.setOnClickListener(new View.OnClickListener() {
@@ -72,6 +83,6 @@ public class Main2Activity extends AppCompatActivity {
         if(seconds<10) timeleftText+="0";
         timeleftText+=seconds;
 
-        tv_time_1.setText(timeleftText);
+        tv_starttime_1.setText(timeleftText);
     }
 }
